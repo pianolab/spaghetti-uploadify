@@ -14,6 +14,7 @@ class UploadifyController extends AppController
         $attachment = new Attachment($response['data']);
 
         $attachment->parent_id = 0;
+        $attachment->parent_name = 'modelName';
         $attachment->save();
 
         $this->arrView['attachment'] = $attachment;
